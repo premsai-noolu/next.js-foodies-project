@@ -162,6 +162,23 @@ const dummyMeals = [
     creator: 'Sophia Green',
     creator_email: 'sophiagreen@example.com',
   },
+  {
+    title: 'Dum Biryani',
+    slug: 'dum-biryani',
+    image: '/images/dum-biryani.jpg',
+    summary: 'Biryaniii 💖',
+    instructions: '1️⃣ Wash and soak basmati rice for 20–30 minutes.\r\n' +
+      '2️⃣ Marinate chicken with curd, ginger-garlic paste, chili powder, turmeric, garam masala, salt, and lemon juice (30 mins).\r\n' +
+      '3️⃣ Fry sliced onions until golden brown. Keep aside.\r\n' +
+      '4️⃣ Cook rice in salted boiling water until 70% done. Drain.\r\n' +
+      '5️⃣ In a pot, add marinated chicken and cook for 5–7 minutes.\r\n' +
+      '6️⃣ Layer half-cooked rice over the chicken.\r\n' +
+      '7️⃣ Add fried onions, mint, coriander, and a little ghee.\r\n' +
+      '8️⃣ Cover tightly and cook on low flame (dum) for 20–25 minutes.\r\n' +
+      '9️⃣ Mix gently and serve hot.',
+    creator: 'Prem Sai',
+    creator_email: 'prem@gmail.com'
+  },
 ];
 
 db.prepare(`
@@ -192,6 +209,7 @@ async function initData() {
    `);
 
   for (const meal of dummyMeals) {
+   console.log(meal)
     stmt.run(meal);
   }
 }

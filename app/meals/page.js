@@ -7,6 +7,7 @@ import Error from './error'
 
 async function Meals(){
     const meals = await getMeals()
+    console.log(meals)
 
     return <MealsGrid meals={meals} />
 }
