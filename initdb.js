@@ -209,7 +209,6 @@ async function initData() {
    `);
 
   for (const meal of dummyMeals) {
-   console.log(meal)
     stmt.run(meal);
   }
 }
